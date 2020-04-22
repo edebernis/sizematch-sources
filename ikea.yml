@@ -1,0 +1,15 @@
+version: 0.1
+
+brands:
+  - ikea
+
+langs:
+  - fr
+  - en
+
+baseUrl: "https://www.ikea.com"
+
+langSelector:
+  baseUrlSuffix:
+    fr: fr/fr
+    en: gb/en

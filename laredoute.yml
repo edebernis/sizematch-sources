@@ -1,0 +1,16 @@
+version: 0.1
+
+brands:
+  - laredouteinterieurs
+  - ampm
+
+langs:
+  - fr
+  - en
+
+baseUrl: "https://www.laredoute.com"
+
+langSelector:
+  tld:
+    fr: fr
+    en: co.uk
