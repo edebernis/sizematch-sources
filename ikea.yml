@@ -1,15 +1,26 @@
 version: 0.1
 
-brands:
-  - ikea
+baseUrl: https://www.ikea.com
 
 langs:
   - fr
   - en
 
-baseUrl: "https://www.ikea.com"
+brands:
+  - ikea
 
 langSelector:
-  baseUrlSuffix:
+  mode: baseUrlSuffix
+  mapping:
     fr: fr/fr
     en: gb/en
+
+categories:
+  urlRegex: "/cat/(?P<slug>[a-z0-9\\-]+)-(?P<id>[a-z0-9]+)"
+  trailing_slash: true
+  pagination:
+    mode: urlPathSuffix
+    format: "page-{}"
+
+products:
+  urlRegex: "/p/(?P<slug>[a-z0-9\\-]+)-s?(?P<id>[0-9]+)"

@@ -1,16 +1,37 @@
 version: 0.1
 
-brands:
-  - laredouteinterieurs
-  - ampm
+baseUrl: https://www.laredoute.com
 
 langs:
   - fr
   - en
 
-baseUrl: "https://www.laredoute.com"
+brands:
+  - laredouteinterieurs
+  - ampm
 
 langSelector:
-  tld:
+  mode: baseUrlTLD
+  mapping:
     fr: fr
     en: co.uk
+
+brandSelector:
+  mode: categoryQueryParam
+  mapping:
+    laredouteinterieurs:
+      brndid: la-redoute-interieurs
+    ampm:
+      brndid: ampm
+
+categories:
+  urlRegex: "/pplp/([0-9/]+)/cat-(?P<id>[0-9]+)\\.aspx"
+  trailing_slash: false
+  pagination:
+    mode: queryParam
+    key: pgnt
+
+products:
+  urlRegex: "/ppdp/prod-(?P<id>[0-9]+)\\.aspx"
+
+delay: 2
