@@ -33,5 +33,10 @@ categories:
 
 products:
   urlRegex: "/ppdp/prod-(?P<id>[0-9]+)\\.aspx"
+  breadcrumbs:
+    jsonld:
+      start: 1
+    microdata:
+      start: 1
 
 delay: 2

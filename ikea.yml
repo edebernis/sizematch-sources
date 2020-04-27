@@ -6,9 +6,6 @@ langs:
   - fr
   - en
 
-brands:
-  - ikea
-
 langSelector:
   mode: baseUrlSuffix
   mapping:
@@ -24,3 +21,10 @@ categories:
 
 products:
   urlRegex: "/p/(?P<slug>[a-z0-9\\-]+)-s?(?P<id>[0-9]+)"
+  breadcrumbs:
+    jsonld:
+      start: 1
+      end: -1
+    microdata:
+      start: 2
+      end: -1
